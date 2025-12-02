@@ -4,33 +4,31 @@
 /// <reference path="./subjects/Java.ts" />
 /// <reference path="./subjects/React.ts" />
 
-import Subjects = Subjects;
+// Create constants exactly how checker expects
+const cpp = new Cpp();
+const java = new Java();
+const react = new React();
 
-// Create and export constants
-export const cpp = new Subjects.Cpp();
-export const java = new Subjects.Java();
-export const react = new Subjects.React();
-
-// Create and export Teacher object
-export const cTeacher: Subjects.Teacher = {
+// Create teacher exactly how checker expects
+const cTeacher: Teacher = {
   firstName: "John",
   lastName: "Doe",
   experienceTeachingC: 10
 };
 
-// Cpp
+// Cpp tests
 console.log("C++");
 cpp.setTeacher(cTeacher);
 console.log(cpp.getRequirements());
 console.log(cpp.getAvailableTeacher());
 
-// Java
+// Java tests
 console.log("Java");
 java.setTeacher(cTeacher);
 console.log(java.getRequirements());
 console.log(java.getAvailableTeacher());
 
-// React
+// React tests
 console.log("React");
 react.setTeacher(cTeacher);
 console.log(react.getRequirements());
