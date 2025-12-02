@@ -1,32 +1,36 @@
+/// <reference path="./subjects/Teacher.ts" />
+/// <reference path="./subjects/Subject.ts" />
+/// <reference path="./subjects/Cpp.ts" />
+/// <reference path="./subjects/Java.ts" />
+/// <reference path="./subjects/React.ts" />
 
+import Subjects = Subjects;
 
-import * as Subjects from './subjects';
-
-// Create and export constants for the subjects
+// Create and export constants
 export const cpp = new Subjects.Cpp();
 export const java = new Subjects.Java();
 export const react = new Subjects.React();
 
-// Create and export a Teacher object
+// Create and export Teacher object
 export const cTeacher: Subjects.Teacher = {
   firstName: "John",
   lastName: "Doe",
-  experienceTeachingC: 10,
+  experienceTeachingC: 10
 };
 
-// ---------- C++ ----------
+// Cpp
 console.log("C++");
 cpp.setTeacher(cTeacher);
 console.log(cpp.getRequirements());
 console.log(cpp.getAvailableTeacher());
 
-// ---------- Java ----------
+// Java
 console.log("Java");
 java.setTeacher(cTeacher);
 console.log(java.getRequirements());
 console.log(java.getAvailableTeacher());
 
-// ---------- React ----------
+// React
 console.log("React");
 react.setTeacher(cTeacher);
 console.log(react.getRequirements());
